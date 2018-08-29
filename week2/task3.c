@@ -6,7 +6,7 @@
 
 void pyramid(int height){
     int i,k,j;
-    
+	// This code does magic    
     for (i=1;i<=height;i++){
         for (k = height - ((2*i-1)/2);k>0;k--)
             printf(" ");
