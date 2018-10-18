@@ -1,0 +1,12 @@
+
+Let's get a case when Miss amount will be constant while Hit amount will be равномерно increasing.
+
+Supposse, we have 5 frames and the sequence of page references consist of repetitions only of "1","2","3","4","5".
+
+In such case Miss amount will increase every time whin we looking for a new number of page. Totally, we have 5 pages, so Miss amount will be from 0 till 5.
+
+What about hit amount - it will increase, because of number of frames is not less than amount of pages.
+
+Tadaaam!
+
+

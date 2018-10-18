@@ -3,15 +3,17 @@
 #include <stdlib.h>
 
 int main(){
+    //initialization
     int size;
     int hitAmount = 0;
     int missAmount = 0;
-    //fscanf(откуда, что , куда)
+    
 
     FILE *mf;
     mf = fopen("input.txt", "r");
-    scanf("%d" ,&size);
+    scanf("%d" ,&size);//get the amount of frames
     
+    //still initialization
     int pages[size];
     int mask[size];
     int isHit;
@@ -23,6 +25,7 @@ int main(){
     
     int number;
     
+    //paging system simulation using the ageing algorithm
     fscanf(mf,"%d",&number);
     while (!feof(mf)){
         
@@ -37,12 +40,10 @@ int main(){
             if (pages[i] == number){
                 isHit = 1;
                 indexHit = i;
-                //printf("Hit address  %d \n", indexHit);
             }
             if (pages[i] == 0) {
                 havePlace = 1;
                 indexPlace = i;
-                //printf("Pages are sim ind = %d , pages[i] = %d \n", indexPlace,pages[i] );
             }
             if (mask[i] < currMin){
                 currMin = mask[i];
@@ -73,8 +74,7 @@ int main(){
                 for (int i = 0; i<size; i++){
                     mask[i] = mask[i] >> 1;
                 }
-                mask[indexMinVal] = 0x80;
-                //check            
+                mask[indexMinVal] = 0x80;            
             }
         }
         
