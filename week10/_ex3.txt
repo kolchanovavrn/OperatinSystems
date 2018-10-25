@@ -1,0 +1,11 @@
+Step 1:
+-rw-rw-rw- 1 root root 0 Oct 25 13:55 _ex3.txt
+
+Step 2:
+-rwxrw-rwx 1 root root 47 Oct 25 13:59 _ex3.txt
+
+Step 3:
+660 - -rw-rw-rw-  - user, grop and others can read and write only, cannot execute
+775 - -rwxrwx-wx- - user and group have all permissions (to write, to execute and to read), others can only write and execute, can't read
+777 - -rwxrwxrwx- - user, group and others have all permissions (to read, to write, to execute)
+
