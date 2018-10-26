@@ -32,8 +32,11 @@ int main(){
     struct stat files[amount_of_files];
     struct dirent dfiles[amount_of_files];
 
-    dirp = opendir("./tmp");
+    dirp = opendir("tmp");
+
     while ( (dirEntry = readdir(dirp)) !=NULL ) {     
+        strcpy(path, "/tmp");
+        strcat(path, dirEntry->d_name);
         stat(path,&buffer);
         if (buffer.st_nlink >= 2){
             files[index] = buffer;
