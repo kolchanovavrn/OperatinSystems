@@ -1,0 +1,16 @@
+case a:
+
+string is "Hello".
+fork() calls a child and a parent process
+    each contains in their buffers "Hello" string.
+after \n - text is printed and buffer is emptied
+    that is for each buffer of child and parent processes ==>
+        "Hello" is printed twice.
+
+case b:
+
+string is "Hello/n"
+after "/n" symbol a buffer is emptied
+    (each time when in buffer writed for putput flow a "/n" symbol)
+hence after fork() call the buffer is emptied ==>
+    "Hello" is printed once.
