@@ -1,0 +1,3 @@
+Speed increases without function O_SYNC.
+As more becomes buffer size increases then more the speed increases, because we need to make fewer system calls and more information fit into one record, hence fewer traps.
+
